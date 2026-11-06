@@ -3,6 +3,7 @@
 @theme {
   --color-pet: #5b0f8f;
   --font-sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --color-pet-accent: #8e00c8;
   --font-sans: 'Poppins', system-ui, sans-serif;
 }
 
