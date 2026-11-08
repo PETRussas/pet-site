@@ -2,8 +2,8 @@
 
 @theme {
   --color-pet: #5b0f8f;
-  --font-sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --color-pet-accent: #8e00c8;
+  --color-circuitao: #9b2fc9;
   --font-sans: 'Poppins', system-ui, sans-serif;
 }
 
@@ -15,4 +15,21 @@ body {
   margin: 0;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee 80s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
 }
