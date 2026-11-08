@@ -4,6 +4,7 @@ interface ArrowButtonProps {
   href: string;
   children: ReactNode;
   direction?: "right" | "up-right";
+  external?: boolean;
   onClick?: () => void;
 }
 
@@ -16,12 +17,15 @@ export default function ArrowButton({
   href,
   children,
   direction = "right",
+  external = false,
   onClick,
 }: ArrowButtonProps) {
   return (
     <a
       href={href}
       onClick={onClick}
+      target={external ? "_blank" : undefined}
+      rel={external ? "noopener noreferrer" : undefined}
       className="group inline-flex items-center gap-3 rounded-full bg-white py-1.5 pl-6 pr-1.5 text-xs font-bold uppercase tracking-wide text-[#5a0f8a] shadow-md transition hover:bg-purple-100"
     >
       {children}
